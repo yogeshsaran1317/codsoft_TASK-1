@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireMe - Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="logo">
+            <i class="fa-solid fa-quote-left"></i> InspireMe
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="admin.html" class="active">Admin</a>
+        </div>
+    </nav>
+
+    <main class="container admin-container">
+        <section class="admin-panel glass-effect">
+            <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> Admin Dashboard</h2>
+            <p class="section-desc">Add new quotes to be featured on the application.</p>
+            
+            <form id="add-quote-form" class="admin-form">
+                <div class="form-group">
+                    <label for="quote-input">Quote Text</label>
+                    <textarea id="quote-input" rows="4" placeholder="Enter the inspiring quote here..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author-input">Author (Optional)</label>
+                    <input type="text" id="author-input" placeholder="e.g. Steve Jobs">
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="feature-checkbox" checked>
+                        Make this the "Quote of the Day" immediately
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn primary-btn">
+                    <i class="fa-solid fa-plus"></i> Add Quote
+                </button>
+            </form>
+            
+            <div id="success-message" class="toast-message hidden">
+                <i class="fa-solid fa-circle-check"></i> Quote added successfully!
+            </div>
+        </section>
+
+        <section class="admin-quotes-list glass-effect">
+            <h3>Recent Admin Quotes</h3>
+            <div id="admin-quotes-container" class="admin-list">
+                <!-- Admin quotes will be injected here -->
+            </div>
+            <button id="clear-data-btn" class="danger-btn">
+                <i class="fa-solid fa-trash-can"></i> Clear All Storage Data
+            </button>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

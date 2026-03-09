@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireMe - Daily Quotes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="logo">
+            <i class="fa-solid fa-quote-left"></i> InspireMe
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Today's Quote Section -->
+        <section class="today-quote-section">
+            <h2 class="section-title">✨ Quote of the Day</h2>
+            <div class="quote-card featured glass-effect" id="today-quote-card">
+                <div class="quote-content">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="quote-text" id="today-quote-text">Loading inspiration...</p>
+                    <p class="quote-author" id="today-quote-author">-</p>
+                </div>
+                <div class="quote-actions">
+                    <button class="action-btn favorite-btn" id="today-favorite-btn" title="Save to Favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button class="action-btn share-btn" id="today-share-btn" title="Share Quote">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Quotes Grid -->
+        <section class="more-quotes-section">
+            <h3 class="section-subtitle">More Inspiration</h3>
+            <div class="quotes-grid" id="quotes-grid">
+                <!-- Quote cards will be injected here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

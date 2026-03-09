@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireMe - Favorites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="logo">
+            <i class="fa-solid fa-quote-left"></i> InspireMe
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="favorites.html" class="active">Favorites</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="favorites-section">
+            <h2 class="section-title">💖 Your Favorites</h2>
+            <div id="favorites-empty-state" class="empty-state glass-effect hidden">
+                <i class="fa-regular fa-face-frown-open empty-icon"></i>
+                <h3>No favorites yet.</h3>
+                <p>Go to the home page to find some inspiring quotes!</p>
+                <a href="index.html" class="primary-btn">Explore Quotes</a>
+            </div>
+            <div class="quotes-grid" id="favorites-grid">
+                <!-- Favorite quote cards will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="favorites.js"></script>
+</body>
+</html>
